@@ -48,6 +48,7 @@ class ObjectClient extends MinioClient
                 'Bucket'     => $bucket,
                 'Key'        => $storageSavePath,
                 'SourceFile' => $localObjectPath,
+                'ContentType' => mime_content_type($localObjectPath)
             ]);
 
             return $storageSavePath;
